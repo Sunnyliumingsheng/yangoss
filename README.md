@@ -13,4 +13,10 @@ it is easy to work
 ----
 4. ok you can use this package to build a oss
 ----
-config:
+set the value of Config or use the default
+config:ServerPath is your picture url ,for example :http://localhost:80/img (do not end with /)
+config:StoragePath is your directory path ,for example :~/temp/picture
+
+and use function
+UploadFile
+RemoveFile

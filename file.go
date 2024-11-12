@@ -15,7 +15,8 @@ func UploadFile(file multipart.File, handler *multipart.FileHeader) (url string,
 	NewFilename = Hash(handler.Filename)
 	extension := filepath.Ext(handler.Filename)
 
-	dst := Config.StoragePath + NewFilename + extension
+	fileDetail := NewFilename + extension
+	dst := filepath.Join(Config.StoragePath, fileDetail)
 	newFile, err := os.Create(dst)
 	if err != nil {
 		return "", err
