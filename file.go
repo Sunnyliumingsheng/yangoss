@@ -39,7 +39,7 @@ func RemoveFile(fileUrl string) (err error) {
 	fileName := filepath.Base(parsedURL.Path)
 
 	// 构建文件的完整路径
-	dst := filepath.Join(Config.ServerPath, fileName)
+	dst := filepath.Join(Config.StoragePath, fileName)
 	err = os.Remove(dst)
 	return err
 }
